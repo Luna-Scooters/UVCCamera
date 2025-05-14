@@ -36,12 +36,13 @@ android {
     defaultConfig {
         minSdkVersion 28
 		targetSdkVersion versionTarget
+		consumerProguardFiles 'consumer-rules.pro'
     }
 
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 	sourceSets {
